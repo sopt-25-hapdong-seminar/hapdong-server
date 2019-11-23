@@ -24,7 +24,7 @@ router.get("/:userIdx", function(req, res, next) {
   res.json({
     status: 200,
     success: true,
-    message: "로그인 성공"
+    message: "회원 조회 성공"
   });
 });
 module.exports = router;
