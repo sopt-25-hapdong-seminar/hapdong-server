@@ -21,8 +21,8 @@ router.post("/signup", function(req, res, next) {
   });
 });
 
-router.get("/:userIdx", function(req, res, next) {
-  const userIdx = req.params.userIdx;
+router.get("/:id", function(req, res, next) {
+  const id = req.params.id;
   console.log(userIdx);
   res.json({
     status: 200,
