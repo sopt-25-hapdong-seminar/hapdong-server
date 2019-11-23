@@ -23,7 +23,7 @@ router.post("/signup", function(req, res, next) {
 
 router.get("/:id", function(req, res, next) {
   const id = req.params.id;
-  console.log(userIdx);
+  console.log(id);
   res.json({
     status: 200,
     success: true,
