@@ -8,6 +8,7 @@ router.get("/signin", function(req, res, next) {
     success: true,
     message: "로그인 성공",
     data: {
+      userIdx: 1,
       userId: "user1"
     }
   });
@@ -21,13 +22,14 @@ router.post("/signup", function(req, res, next) {
   });
 });
 
-router.get("/:id", function(req, res, next) {
-  const id = req.params.id;
-  console.log(id);
+router.get("/:userIdx", function(req, res, next) {
+  const userIdx = req.params.userIdx;
+  console.log(userIdx);
   res.json({
     status: 200,
     success: true,
-    message: "회원 조회 성공"
+    message: "회원 조회 성공",
+    data: { userIdx: userIdx, userId: `user${userIdx}` }
   });
 });
 module.exports = router;
